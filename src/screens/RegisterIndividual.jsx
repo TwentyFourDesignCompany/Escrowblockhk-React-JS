@@ -326,7 +326,7 @@ export default function RegisterIndividual() {
           />
         </div>
         <Link
-          to="/"
+          to="/transaction"
           onClick={() => {
             window.scrollTo({
               top: 0,
