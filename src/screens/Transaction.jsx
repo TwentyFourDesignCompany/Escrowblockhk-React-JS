@@ -3,6 +3,25 @@ import { Link } from "react-router-dom";
 import waveBG from "../assets/waveBg.svg";
 import InputBox from "../components/InputBox";
 
+function TransactionEntry() {
+  return (
+    <div className="register__section__forms__content__history__details__row">
+      <div className="register__section__forms__content__history__details__entry">
+        March 16, 2022 <span>12:00 PM</span>
+      </div>
+      <div className="register__section__forms__content__history__details__entry">
+        e288452ce3234
+      </div>
+      <div className="register__section__forms__content__history__details__entry">
+        Bitcoin
+      </div>
+      <div className="register__section__forms__content__history__details__entry">
+        BTC <span>0.000135000</span>
+      </div>
+    </div>
+  );
+}
+
 export default function Transaction() {
   return (
     <>
@@ -60,6 +79,38 @@ export default function Transaction() {
           </Link>
         </div>
       </form>
+      <div className="register__section__forms__content__history">
+        <div className="register__section__forms__content__history__content">
+          <div className="register__section__forms__content__history__heading__row">
+            <div className="register__section__forms__content__history__heading__entry">
+              Date
+            </div>
+            <div className="register__section__forms__content__history__heading__entry">
+              Transaction ID
+            </div>
+            <div className="register__section__forms__content__history__heading__entry">
+              Payment In
+            </div>
+            <div className="register__section__forms__content__history__heading__entry">
+              Amount
+            </div>
+          </div>
+          <TransactionEntry />
+          <TransactionEntry />
+          <TransactionEntry />
+          <TransactionEntry />
+          <TransactionEntry />
+          <TransactionEntry />
+          <TransactionEntry />
+          <TransactionEntry />
+          <TransactionEntry />
+          <TransactionEntry />
+          <TransactionEntry />
+          <TransactionEntry />
+          <TransactionEntry />
+          <TransactionEntry />
+        </div>
+      </div>
     </>
   );
 }

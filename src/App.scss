@@ -397,6 +397,7 @@ strong {
   font-size: 20px;
   color: #000000;
   font-weight: 500;
+  transition: 400ms ease-in-out;
 }
 .otc__trading__section__content__card:hover {
   transform: scale(1.1);
@@ -481,6 +482,7 @@ strong {
   text-align: center;
   border-radius: 12px;
   cursor: pointer;
+  transition: 400ms ease-in-out;
 }
 .otc__vs__escrow__section__content__card__overlay:hover {
   background: rgba(28, 25, 18, 0.1);
@@ -1060,6 +1062,62 @@ input:-webkit-autofill:active {
   color: #000000;
   width: 90%;
 }
+.register__section__forms__content__history {
+  width: 100%;
+  max-width: 1360px;
+  height: fit-content;
+  padding: 2em;
+  margin: 0px auto;
+}
+.register__section__forms__content__history__heading__row {
+  width: 100%;
+  background: rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.register__section__forms__content__history__details__row {
+  width: 100%;
+
+  border-radius: 10px;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+.register__section__forms__content__history__details__row:hover {
+  background: rgb(0, 0, 0, 0.2);
+  transition: 400ms ease-in-out;
+}
+.register__section__forms__content__history__heading__entry {
+  width: 25%;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 600;
+  text-align: center;
+}
+.register__section__forms__content__history__details__entry {
+  width: 25%;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.register__section__forms__content__history__details__entry span {
+  font-size: 14px;
+}
+.register__section__forms__content__history__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 @media (max-width: 1250px) {
   .footer_maincontainercontententrywrapperentry_link::after {
     display: none;
@@ -1148,6 +1206,28 @@ input:-webkit-autofill:active {
   }
 }
 @media (max-width: 700px) {
+  .register__section__forms__content__history {
+    overflow-x: scroll;
+  }
+  .register__section__forms__content__history::-webkit-scrollbar {
+    height: 12px;
+    cursor: pointer;
+  }
+  .register__section__forms__content__history::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #f5ca4e, #ffbc00);
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  .register__section__forms__content__history::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .register__section__forms__content__history__content {
+    width: 700px;
+    height: fit-content;
+  }
+  .register__section__forms__content__history__heading__entry {
+    width: 200px !important;
+  }
   .get__started__now__section__content__card {
     flex-direction: column;
   }

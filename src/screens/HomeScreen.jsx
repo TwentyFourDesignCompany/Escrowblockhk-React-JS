@@ -10,7 +10,7 @@ import Marquee from "react-fast-marquee";
 import buy__coin__pic from "../assets/buy__coin__pic.png";
 import forex1 from "../assets/forex1.png";
 import forex2 from "../assets/forex2.png";
-import growing__bg from "../assets/growing__bg.png";
+import growing__bg from "../assets/growing__bg.jpg";
 import openaccount1 from "../assets/open-account1.svg";
 import openaccount2 from "../assets/open-account2.svg";
 import openaccount3 from "../assets/open-account3.svg";

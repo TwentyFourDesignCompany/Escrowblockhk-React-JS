@@ -10,7 +10,7 @@ import Login from "./screens/Login";
 import Service from "./screens/Service";
 import AboutUs from "./screens/AboutUs";
 import SellBitCoin from "./screens/SellBitCoin";
-import Transaction from "./components/Transaction";
+import Transaction from "./screens/Transaction";
 
 export default function App() {
   return (

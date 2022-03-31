@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import main__bg from "../assets/main__bg.png";
+import main__bg from "../assets/main__bg.jpg";
 import Typewriter from "typewriter-effect";
 
 export default function HomeSectionSwiperEntry({ toPath, isRight, noBtn }) {
