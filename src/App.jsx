@@ -7,10 +7,12 @@ import Footer from "./components/Footer";
 import Register from "./screens/Register";
 import RegisterIndividual from "./screens/RegisterIndividual";
 import Login from "./screens/Login";
-import Service from "./screens/Service";
+import Service from "./screens/TradeForMe";
 import AboutUs from "./screens/AboutUs";
 import SellBitCoin from "./screens/SellBitCoin";
 import Transaction from "./screens/Transaction";
+import BuyBitCoin from "./screens/BuyBitCoin";
+import TradeForMe from "./screens/TradeForMe";
 
 export default function App() {
   return (
@@ -21,9 +23,10 @@ export default function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/individual-register" element={<RegisterIndividual />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/service" element={<Service />} />
+        <Route path="/trade-for-me" element={<TradeForMe />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/sell-bitcoin" element={<SellBitCoin />} />
+        <Route path="/sell-bitcoin" element={<BuyBitCoin />} />
+        <Route path="/buy-bitcoin" element={<SellBitCoin />} />
         <Route path="/transaction" element={<Transaction />} />
       </Routes>
       <Footer />

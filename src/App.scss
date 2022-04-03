@@ -113,6 +113,41 @@ body {
 .header__container__nav__link {
   position: relative;
 }
+.header__container__nav__link__content__dropdown {
+  position: absolute;
+  top: 43px;
+  border-radius: 20px;
+  left: -30px;
+  width: 200px;
+  height: fit-content;
+  padding: 1em;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  z-index: 999;
+}
+.header__container__nav__link:hover
+  .header__container__nav__link__content__dropdown {
+  display: flex;
+}
+.header__container__nav__link__content__dropdown__entry {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  padding: 0.5em 0em;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.header__container__nav__link__content__dropdown__entry:hover {
+  background: #ffbc00;
+  color: #fff;
+  transition: 300ms ease-in-out;
+}
 .header__container__nav__link__input {
   position: absolute;
   top: 0px;
@@ -122,6 +157,7 @@ body {
   cursor: pointer;
   opacity: 0;
 }
+
 .header__container__nav__link__content {
   padding: 0.7em 1.2em;
   border-radius: 50px;
@@ -811,6 +847,11 @@ strong {
   width: 80%;
   margin: 0.6em 0em;
 }
+.register__section__forms__content__para__2nd {
+  font-size: 16px;
+  color: #000000;
+  width: 75%;
+}
 .contact__container__form__input {
   display: flex;
   flex-direction: column;
@@ -1022,6 +1063,25 @@ input:-webkit-autofill:active {
   opacity: 0.6;
   cursor: pointer;
 }
+.faq__section__content__card__trade {
+  padding: 1.5em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+.faq__section__content__card__trade:hover {
+  opacity: 1;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  transition: 300ms ease-in-out;
+  transform: scale(1.06);
+}
 .faq__section__content__card:hover {
   opacity: 1;
   background-color: #ffffff;
@@ -1057,10 +1117,24 @@ input:-webkit-autofill:active {
   width: 90%;
   margin-top: 2em;
 }
+.faq__section__content__card__content__heading__trade {
+  font-size: 18px;
+  color: #ffbc00;
+  font-weight: 600;
+  margin: 0.4em 0em;
+  width: 100%;
+  margin-top: 2em;
+}
 .faq__section__content__card__content__para {
   font-size: 16px;
   color: #000000;
   width: 90%;
+}
+.faq__section__content__card__content__para__trade {
+  font-size: 16px;
+  color: #000000;
+  width: 100%;
+  text-align: center;
 }
 .register__section__forms__content__history {
   width: 100%;
@@ -1124,6 +1198,9 @@ input:-webkit-autofill:active {
   }
 }
 @media (max-width: 1050px) {
+  .register__section__forms__content__para__2nd {
+    width: 100%;
+  }
   .faq__section__content__card {
     width: 100%;
   }
@@ -1249,7 +1326,7 @@ input:-webkit-autofill:active {
     height: 800px;
   }
   .home__section__carousel__entry__overlay__content {
-    margin-top: 4em;
+    margin-top: 8em;
   }
   .about__section__content__card {
     width: 100%;
@@ -1316,7 +1393,7 @@ input:-webkit-autofill:active {
     width: 300px;
   }
   .home__section__carousel__entry__overlay__content__sub__heading {
-    text-align: center;
+    text-align: start;
   }
   .home__section__carousel__entry__img {
     width: 1000px;

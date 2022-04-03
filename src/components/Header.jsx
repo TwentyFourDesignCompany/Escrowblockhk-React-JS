@@ -22,6 +22,45 @@ function NavLink({ label, path, defaultChecked }) {
     </div>
   );
 }
+function NavLinkDropDown({ label, path, defaultChecked }) {
+  return (
+    <div className="header__container__nav__link">
+      <input
+        type="radio"
+        className="header__container__nav__link__input"
+        name="header__container__nav__link__input"
+        defaultChecked={defaultChecked}
+      />
+      <div className="header__container__nav__link__content">{label}</div>
+      <div className="header__container__nav__link__content__dropdown">
+        <Link
+          to="/sell-bitcoin"
+          className="header__container__nav__link__content__dropdown__entry"
+        >
+          Buy Bitcoin
+        </Link>
+        <Link
+          to="/buy-bitcoin"
+          className="header__container__nav__link__content__dropdown__entry"
+        >
+          Sell Bitcoin
+        </Link>
+        <Link
+          to="/trade-for-me"
+          className="header__container__nav__link__content__dropdown__entry"
+        >
+          Trade Forex For Me
+        </Link>
+        <Link
+          to="/"
+          className="header__container__nav__link__content__dropdown__entry"
+        >
+          Forex Training
+        </Link>
+      </div>
+    </div>
+  );
+}
 
 export default function Header() {
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
@@ -78,8 +117,8 @@ export default function Header() {
           ) : null}
           <div className="header__container__nav__links">
             <NavLink label="About Us" path="/about-us" />
-            <NavLink label="Our Services" path="/service" />
-            <NavLink label="Sell Bitcoin" path="/sell-bitcoin" />
+            <NavLinkDropDown label="Our Services" path="/service" />
+            <NavLink label="Buy Bitcoin" path="/sell-bitcoin" />
             <NavLink label="Register" path="/register" />
             <NavLink label="Helpdesk" path="/login" />
             <NavLink label="Login" path="/login" />
