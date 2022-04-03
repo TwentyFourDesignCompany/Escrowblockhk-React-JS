@@ -1,15 +1,23 @@
-import React from "react";
+import React from "react"
 
-export default function InputBox({ placeholder, type, variant, onChange }) {
+export default function InputBox({
+  name,
+  placeholder,
+  type,
+  variant,
+  onChange,
+  value
+}) {
   if (variant === "select") {
     return (
       <div className="contact__container__form__input">
         <input
           list="ice-cream-flavors"
-          id="ice-cream-choice"
-          name="ice-cream-choice"
+          // id="ice-cream-choice"
+          name={name}
           placeholder={placeholder}
           className="contact__container__form__input__field"
+          onChange={onChange}
         />
 
         <datalist id="ice-cream-flavors">
@@ -26,7 +34,7 @@ export default function InputBox({ placeholder, type, variant, onChange }) {
           {placeholder}
         </label>
       </div>
-    );
+    )
   } else if (variant === "textarea") {
     return (
       <div
@@ -34,10 +42,11 @@ export default function InputBox({ placeholder, type, variant, onChange }) {
         style={{ marginRight: "0em" }}
       >
         <textarea
+          value={value}
           type={type}
           placeholder={placeholder}
           id={placeholder}
-          name={placeholder}
+          name={name}
           rows={5}
           className="contact__container__form__input__field"
         />
@@ -48,15 +57,16 @@ export default function InputBox({ placeholder, type, variant, onChange }) {
           {placeholder}
         </label>
       </div>
-    );
+    )
   } else {
     return (
       <div className="contact__container__form__input">
         <input
+          value={value}
           type={type}
           placeholder={placeholder}
           id={placeholder}
-          name={placeholder}
+          name={name}
           className="contact__container__form__input__field"
           onChange={onChange}
         />
@@ -67,6 +77,6 @@ export default function InputBox({ placeholder, type, variant, onChange }) {
           {placeholder}
         </label>
       </div>
-    );
+    )
   }
 }
