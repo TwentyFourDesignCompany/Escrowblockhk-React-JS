@@ -32,7 +32,7 @@ export default function Transaction() {
             style={{ color: "#000000" }}
             className="home__section__carousel__entry__overlay__content__heading"
           >
-            MAKE A DEPOSIT
+            Transactions
           </div>
         </div>
       </div>
@@ -41,23 +41,38 @@ export default function Transaction() {
           <div className="register__section__forms__content__inputs__one">
             <InputBox
               variant="select"
-              placeholder="Select a Wallet"
+              placeholder="Buying Currency"
               required={true}
               type="text"
             />
           </div>
           <div className="register__section__forms__content__inputs__one">
             <InputBox
-              variant="select"
-              placeholder="Select a Type"
+              placeholder="Transaction Amount"
               required={true}
-              type="text"
+              type="number"
             />
           </div>
         </div>
+        <div
+          style={{ marginTop: 40 }}
+          className="register__section__forms__content__history__heading__entry"
+        >
+          Receiving Bank Details
+        </div>
+        <div className="register__section__forms__content__inputs__one">
+          <InputBox placeholder="Account Name" required={true} type="text" />
+        </div>
+        <div className="register__section__forms__content__inputs__one">
+          <InputBox placeholder="Bank Name" required={true} type="text" />
+        </div>
+        <div className="register__section__forms__content__inputs__one">
+          <InputBox placeholder=" Account Number" required={true} type="text" />
+        </div>
         <div className="register__section__forms__content__inputs__one">
           <InputBox
-            placeholder="Amount to Deposit"
+            variant="select"
+            placeholder="Select Currency"
             required={true}
             type="text"
           />
@@ -75,7 +90,7 @@ export default function Transaction() {
             }}
             className="button__secondary"
           >
-            Deposit
+            Submit
           </Link>
         </div>
       </form>

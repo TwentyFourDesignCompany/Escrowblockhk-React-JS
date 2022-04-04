@@ -52,7 +52,7 @@ function NavLinkDropDown({ label, path, defaultChecked }) {
           Trade Forex For Me
         </Link>
         <Link
-          to="/"
+          to="/forex-training"
           className="header__container__nav__link__content__dropdown__entry"
         >
           Forex Training

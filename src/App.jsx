@@ -13,6 +13,7 @@ import SellBitCoin from "./screens/SellBitCoin";
 import Transaction from "./screens/Transaction";
 import BuyBitCoin from "./screens/BuyBitCoin";
 import TradeForMe from "./screens/TradeForMe";
+import ForexTraning from "./screens/ForexTraning";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/sell-bitcoin" element={<BuyBitCoin />} />
         <Route path="/buy-bitcoin" element={<SellBitCoin />} />
         <Route path="/transaction" element={<Transaction />} />
+        <Route path="/forex-training" element={<ForexTraning />} />
       </Routes>
       <Footer />
     </>
