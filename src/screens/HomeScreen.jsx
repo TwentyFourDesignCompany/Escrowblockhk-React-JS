@@ -1,19 +1,20 @@
-import React from "react";
-import HomeSectionSwiperEntry from "../components/HomeSectionSwiperEntry";
-import OTCPic1 from "../assets/OTCPic1.svg";
-import OTCPic2 from "../assets/OTCPic2.svg";
-import OTCPic3 from "../assets/OTCPic3.svg";
-import supported1stPic from "../assets/supported1stPic.png";
-import supported2Pic from "../assets/supported2Pic.png";
-import CTOVSESCROWPic from "../assets/CTOVSESCROWPic.gif";
-import Marquee from "react-fast-marquee";
-import buy__coin__pic from "../assets/buy__coin__pic.png";
-import forex1 from "../assets/forex1.png";
-import forex2 from "../assets/forex2.png";
-import growing__bg from "../assets/growing__bg.jpg";
-import openaccount1 from "../assets/open-account1.svg";
-import openaccount2 from "../assets/open-account2.svg";
-import openaccount3 from "../assets/open-account3.svg";
+import React, { useState, useEffect } from "react"
+import HomeSectionSwiperEntry from "../components/HomeSectionSwiperEntry"
+import OTCPic1 from "../assets/OTCPic1.svg"
+import OTCPic2 from "../assets/OTCPic2.svg"
+import OTCPic3 from "../assets/OTCPic3.svg"
+import supported1stPic from "../assets/supported1stPic.png"
+import supported2Pic from "../assets/supported2Pic.png"
+import CTOVSESCROWPic from "../assets/CTOVSESCROWPic.gif"
+import Marquee from "react-fast-marquee"
+import buy__coin__pic from "../assets/buy__coin__pic.png"
+import forex1 from "../assets/forex1.png"
+import forex2 from "../assets/forex2.png"
+import growing__bg from "../assets/growing__bg.jpg"
+import openaccount1 from "../assets/open-account1.svg"
+import openaccount2 from "../assets/open-account2.svg"
+import openaccount3 from "../assets/open-account3.svg"
+import axios from "axios"
 
 function OTCTradingCard({ src, title }) {
   return (
@@ -25,7 +26,7 @@ function OTCTradingCard({ src, title }) {
       />
       {title}
     </div>
-  );
+  )
 }
 
 function OTCVSESCROWCard({ title, para }) {
@@ -47,10 +48,10 @@ function OTCVSESCROWCard({ title, para }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-function SwipperCard() {
+function SwipperCard(props) {
   return (
     <div className="swipper__card">
       <svg
@@ -67,11 +68,26 @@ function SwipperCard() {
           />
         </g>
       </svg>
-      USD BitCoin $241.01
+
+      <t style={{ marginRight: "10px" }}>
+        <b>{props.symbol}: </b>
+      </t>
+      {props.price}
     </div>
-  );
+  )
 }
 export default function HomeScreen() {
+  const [Data, setData] = useState([])
+  useEffect(() => {
+    coin()
+  }, [])
+  function coin() {
+    axios.get("https://api.binance.com/api/v1/ticker/allPrices").then((res) => {
+      const responseData = res.data
+      setData(responseData)
+    })
+  }
+
   return (
     <>
       <HomeSectionSwiperEntry />
@@ -84,27 +100,20 @@ export default function HomeScreen() {
           color: "#000000",
           padding: ".5em .5em",
           fontSize: 13,
-          fontWeight: 500,
+          fontWeight: 500
         }}
         gradient={false}
       >
-        <SwipperCard />
-        <SwipperCard />
-        <SwipperCard />
-        <SwipperCard />
-        <SwipperCard />
-        <SwipperCard />
-        <SwipperCard />
-        <SwipperCard />
-        <SwipperCard />
-        <SwipperCard />
-        <SwipperCard />
+        {Data.map((item) => (
+          <SwipperCard symbol={item.symbol} price={item.price} />
+        ))}
       </Marquee>
       <div className="otc__trading__section">
         <div className="otc__trading__section__content">
           <div className="otc__trading__section__content__heading">
             What is OTC Trading?
           </div>
+
           <div className="otc__trading__section__content__para">
             The phrase “crypto OTC” simply refers to the direct exchange of
             crypto assets between buyers and sellers. Trades can be made using
@@ -302,5 +311,5 @@ export default function HomeScreen() {
         />
       </div>
     </>
-  );
+  )
 }
