@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import waveBG from "../assets/waveBg.svg";
 import InputBox from "../components/InputBox";
+import SelectBox from "../components/SelectBox";
 
 function TransactionEntry() {
   return (
@@ -39,10 +40,14 @@ export default function Transaction() {
       <form action="" className="login__container">
         <div className="register__section__forms__content__inputs__two">
           <div className="register__section__forms__content__inputs__one">
-            <InputBox
+            <SelectBox
               variant="select"
               placeholder="Buying Currency"
               required={true}
+              option1={<option value="USD" />}
+              option2={<option value="EUROS" />}
+              option3={<option value="GBP" />}
+              option4={<option value="NAIRA" />}
               type="text"
             />
           </div>

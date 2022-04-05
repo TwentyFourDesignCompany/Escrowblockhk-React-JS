@@ -8,12 +8,12 @@ export default function Register() {
       <div className="register__section">
         <img src={waveBG} alt="waveBG" className="register__section__img" />
         <div className="register__section__content">
-          <div
+          {/* <div
             style={{ color: "#000000" }}
             className="home__section__carousel__entry__overlay__content__sub__heading"
           >
             WELCOME TO
-          </div>
+          </div> */}
           <div
             style={{ color: "#000000" }}
             className="home__section__carousel__entry__overlay__content__heading"

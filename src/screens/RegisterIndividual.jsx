@@ -1,69 +1,70 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import waveBG from "../assets/waveBg.svg"
-import InputBox from "../components/InputBox"
-import { useState } from "react"
-import axios from "axios"
+import React from "react";
+import { Link } from "react-router-dom";
+import waveBG from "../assets/waveBg.svg";
+import InputBox from "../components/InputBox";
+import { useState } from "react";
+import axios from "axios";
+import SelectBox from "../components/SelectBox";
 
 export default function RegisterIndividual() {
-  const [form, setform] = useState({})
+  const [form, setform] = useState({});
   const onChangeHandler = (e) => {
     setform({
       ...form,
-      [e.target.name]: e.target.value
-    })
+      [e.target.name]: e.target.value,
+    });
 
-    console.log("usman", form)
-  }
+    console.log("usman", form);
+  };
 
   async function SignUp() {
-    const Data = new FormData()
-    console.log("Form Data", Data.getAll("usman12"))
+    const Data = new FormData();
+    console.log("Form Data", Data.getAll("usman12"));
 
-    Data.append("name", form.name)
-    Data.append("email", form.email)
-    Data.append("password", form.password)
-    Data.append("confirm_password", form.confirm_password)
-    Data.append("proof_of_address", form.proof_of_address)
-    Data.append("first_name", form.firstname)
-    Data.append("pref_communication", form.preferred_communication)
-    Data.append("register_date", "12/12/2021")
-    Data.append("country_of_origin", form.country_of_origin)
-    Data.append("mobile_number", form.mobile_number)
-    Data.append("telegram", form.telegaram)
-    Data.append("street_address", form.street_address)
-    Data.append("city", form.city)
-    Data.append("state_province_region", form.state_province_region)
-    Data.append("postal_code", form.postal_code)
-    Data.append("ssn", form.ssn)
-    Data.append("gross_annual_income", form.gross_annual_income)
-    Data.append("employment_status", form.employment_status)
+    Data.append("name", form.name);
+    Data.append("email", form.email);
+    Data.append("password", form.password);
+    Data.append("confirm_password", form.confirm_password);
+    Data.append("proof_of_address", form.proof_of_address);
+    Data.append("first_name", form.firstname);
+    Data.append("pref_communication", form.preferred_communication);
+    Data.append("register_date", "12/12/2021");
+    Data.append("country_of_origin", form.country_of_origin);
+    Data.append("mobile_number", form.mobile_number);
+    Data.append("telegram", form.telegaram);
+    Data.append("street_address", form.street_address);
+    Data.append("city", form.city);
+    Data.append("state_province_region", form.state_province_region);
+    Data.append("postal_code", form.postal_code);
+    Data.append("ssn", form.ssn);
+    Data.append("gross_annual_income", form.gross_annual_income);
+    Data.append("employment_status", form.employment_status);
 
-    Data.append("occupation", form.occupation)
-    Data.append("employer", form.employer)
-    Data.append("source_of_funds", form.source_of_funds)
-    Data.append("account_purpose", form.account_purpose)
-    Data.append("transaction_size", form.transaction_size)
-    Data.append("acount_holder_name", form.account_holder_name)
-    Data.append("beneficiary_address", form.beneficiary_address)
-    Data.append("bank_name", form.bank_name)
-    Data.append("bank_address", form.bank_address)
-    Data.append("account_number", form.account_number)
-    Data.append("routing_number", form.routing_number)
-    Data.append("intermediary_bank", form.intermediary_bank)
-    Data.append("crypto_trading_experience", form.crypto_trading_experience)
-    Data.append("if_other_person_to_control", form.if_other_person_to_control)
-    Data.append("how_hear_about_us", form.how_hear_about_us)
+    Data.append("occupation", form.occupation);
+    Data.append("employer", form.employer);
+    Data.append("source_of_funds", form.source_of_funds);
+    Data.append("account_purpose", form.account_purpose);
+    Data.append("transaction_size", form.transaction_size);
+    Data.append("acount_holder_name", form.account_holder_name);
+    Data.append("beneficiary_address", form.beneficiary_address);
+    Data.append("bank_name", form.bank_name);
+    Data.append("bank_address", form.bank_address);
+    Data.append("account_number", form.account_number);
+    Data.append("routing_number", form.routing_number);
+    Data.append("intermediary_bank", form.intermediary_bank);
+    Data.append("crypto_trading_experience", form.crypto_trading_experience);
+    Data.append("if_other_person_to_control", form.if_other_person_to_control);
+    Data.append("how_hear_about_us", form.how_hear_about_us);
 
-    Data.append("photo", form.photo)
-    Data.append("passport", form.passport)
-    Data.append("photo", form.photo)
-    Data.append("bank_statement", form.bank_statement)
-    Data.append("proof_of_address", form.proof_of_address)
+    Data.append("photo", form.photo);
+    Data.append("passport", form.passport);
+    Data.append("photo", form.photo);
+    Data.append("bank_statement", form.bank_statement);
+    Data.append("proof_of_address", form.proof_of_address);
 
     const config = {
-      headers: { "content-type": "multipart/form-data" }
-    }
+      headers: { "content-type": "multipart/form-data" },
+    };
 
     axios
       .post(
@@ -72,11 +73,11 @@ export default function RegisterIndividual() {
         config
       )
       .then((response) => {
-        console.log(response)
+        console.log(response);
       })
       .catch((error) => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
 
   return (
@@ -86,9 +87,9 @@ export default function RegisterIndividual() {
         <div className="register__section__content">
           <div
             style={{ color: "#000000" }}
-            className="home__section__carousel__entry__overlay__content__sub__heading"
+            className="home__section__carousel__entry__overlay__content__heading__sub"
           >
-            WELCOME TO
+            Already Registered? <Link to="/login"> Click here to Login</Link>
           </div>
           <div
             style={{ color: "#000000" }}
@@ -159,10 +160,12 @@ export default function RegisterIndividual() {
         </div>
         <div className="register__section__forms__content__inputs__two">
           <div className="register__section__forms__content__inputs__one">
-            <InputBox
+            <SelectBox
               name="preferred_communication"
-              placeholder="Preferred Communication
-"
+              placeholder="Preferred Communication"
+              option1={<option value="Telegram" />}
+              option2={<option value="Email" />}
+              option3={<option value="WhatsApp" />}
               required={true}
               type="text"
               onChange={onChangeHandler}
@@ -179,10 +182,12 @@ export default function RegisterIndividual() {
           </div>
         </div>
         <div className="register__section__forms__content__inputs__one">
-          <InputBox
+          <SelectBox
             name="gender"
             placeholder="Gender"
             required={true}
+            option1={<option value="Male" />}
+            option2={<option value="Female" />}
             variant="select"
             type="text"
             onChange={onChangeHandler}
@@ -207,6 +212,10 @@ export default function RegisterIndividual() {
               name="country_of_origin"
               placeholder="Country of Origin"
               required={true}
+              option1={<option value="Middle East/Africa " />}
+              option2={<option value="Asia" />}
+              option3={<option value="Europe" />}
+              option4={<option value="South America" />}
               type="text"
               onChange={onChangeHandler}
             />
@@ -355,7 +364,6 @@ export default function RegisterIndividual() {
             name="account_purpose"
             placeholder="Please state your Purpose of Opening an Escrowblockhk account              "
             required={true}
-            variant="select"
             type="text"
             onChange={onChangeHandler}
           />
@@ -531,8 +539,7 @@ export default function RegisterIndividual() {
             onChange={onChangeHandler}
           />
         </div>
-        <Link
-          to="/"
+        <button
           // onClick={() => {
           //   window.scrollTo
           //     top: 0,
@@ -545,13 +552,13 @@ export default function RegisterIndividual() {
             width: 250,
             justifyContent: "center",
             alignItems: "center",
-            display: "flex"
+            display: "flex",
           }}
           className="button"
         >
           Register
-        </Link>
+        </button>
       </form>
     </>
-  )
+  );
 }
