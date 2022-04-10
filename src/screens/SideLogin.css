@@ -1,0 +1,17 @@
+.login_container-2 {
+  background-color: #f4fafd;
+}
+.login_container_img {
+  width: 400px;
+  height: 400px;
+}
+.form-container {
+  width: 100%;
+  padding-top: 20% !important;
+  padding: 12%;
+}
+@media only screen and (max-width: 1000px) {
+  .login_container-2 {
+    display: none;
+  }
+}
