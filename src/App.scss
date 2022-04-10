@@ -56,12 +56,20 @@ body {
 .home__section__carousel__entry__overlay__content__sub__heading {
   font-size: 22px;
   color: white;
+  width: 100%;
 }
 .home__section__carousel__entry__overlay__content__heading {
   font-size: 38px;
   color: white;
   font-weight: 600;
   margin-bottom: 0.5em;
+}
+.home__section__carousel__entry__overlay__content__heading__sub {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  padding: 1em;
 }
 .home__section__carousel__entry__overlay__content__para {
   font-size: 16px;
@@ -914,7 +922,7 @@ input:-webkit-autofill:active {
   height: fit-content;
   padding: 2em;
   margin: 0px auto;
-  max-width: 1100px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1191,6 +1199,175 @@ input:-webkit-autofill:active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.start__up__container__form__input__box {
+  padding: 1em 0.5em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.start__up__container__form__input__box__label {
+  font-size: 16px;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  text-transform: capitalize;
+}
+.start__up__container__form__input__box__label__required {
+  margin-left: 0.3em;
+  color: red;
+}
+.start__up__container__form__input__box__label__explain {
+  font-size: 14px;
+  color: #1a1a1a;
+  margin-bottom: 0.5em;
+}
+.start__up__container__form__input__box__content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.start__up__container__form__input__box__field,
+.start__up__container__form__input__box__text__area {
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.4);
+  padding: 0.5em;
+  outline: none;
+  font-size: 14px;
+  transition: 300ms ease-in-out;
+}
+.start__up__container__form__input__box__field {
+  height: 45px;
+}
+.start__up__container__form__input__box__field:hover,
+.start__up__container__form__input__box__field:focus,
+.start__up__container__form__input__box__text__area:hover,
+.start__up__container__form__input__box__text__area:focus {
+  transition: 300ms ease-in-out;
+  border-color: #ffbc00;
+  border-bottom-width: 1px;
+}
+.start__up__container__form__input__box__radio__label {
+  font-size: 14px;
+  color: #777676;
+}
+.input__form__headings {
+  font-size: 24px;
+  color: #000000;
+  font-weight: 600;
+  padding: 1em 2em;
+}
+.input__form__sub__heading {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 700;
+}
+.start__up__container__form__input__box__radio__input {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+  color: #000;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 1em;
+    user-select: none;
+    margin-right: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // Box.
+  & + label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: #eeeeee;
+    border-radius: 5px;
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: #005dff;
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: #005dff;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
+      4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
+.start__up__container__form__input__box__file__btn {
+  height: 120px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid rgb(0, 0, 0, 0.4);
+  color: #1a1a1a;
+  font-size: 14px;
+  position: relative;
+  margin-top: 0.5em;
+}
+.start__up__container__form__input__box__file {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+.start__up__container__form__input__box__file__btn:hover {
+  transition: 300ms ease-in-out;
+  background-color: #ecebeb;
+  color: rgb(0, 0, 0, 0.4);
+}
+.start__up__container__form__input__box__file__btn__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 1250px) {
   .footer_maincontainercontententrywrapperentry_link::after {

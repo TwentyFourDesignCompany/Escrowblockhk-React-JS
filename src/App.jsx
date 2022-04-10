@@ -1,20 +1,20 @@
-import React from "react"
-import { Route, Routes } from "react-router"
-import HomeScreen from "./screens/HomeScreen"
-import "./App.scss"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import Register from "./screens/Register"
-import RegisterIndividual from "./screens/RegisterIndividual"
-import Login from "./screens/Login"
-import Service from "./screens/TradeForMe"
-import AboutUs from "./screens/AboutUs"
-import SellBitCoin from "./screens/SellBitCoin"
-import Transaction from "./screens/Transaction"
-import BuyBitCoin from "./screens/BuyBitCoin"
-import TradeForMe from "./screens/TradeForMe"
-import SideLogin from "./screens/SideLogin"
-import SideRegister from "./screens/SideRigester"
+import React from "react";
+import { Route, Routes } from "react-router";
+import HomeScreen from "./screens/HomeScreen";
+import "./App.scss";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Register from "./screens/Register";
+import RegisterIndividual from "./screens/RegisterIndividual";
+import Login from "./screens/Login";
+import Service from "./screens/TradeForMe";
+import AboutUs from "./screens/AboutUs";
+import SellBitCoin from "./screens/SellBitCoin";
+import Transaction from "./screens/Transaction";
+import BuyBitCoin from "./screens/BuyBitCoin";
+import TradeForMe from "./screens/TradeForMe";
+import SideLogin from "./screens/SideLogin";
+import SideRegister from "./screens/SideRigester";
 
 export default function App() {
   return (
@@ -32,8 +32,9 @@ export default function App() {
         <Route path="/transaction" element={<Transaction />} />
         <Route path="/side-login" element={<SideLogin />} />
         <Route path="/side-register" element={<SideRegister />} />
+        <Route path="/forex-training" element={<ForexTraning />} />
       </Routes>
       {/* <Footer /> */}
     </>
-  )
+  );
 }

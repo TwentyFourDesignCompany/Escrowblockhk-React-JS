@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import waveBG from "../assets/waveBg.svg";
 import InputBox from "../components/InputBox";
+import SelectBox from "../components/SelectBox";
 
 function TransactionEntry() {
   return (
@@ -32,32 +33,51 @@ export default function Transaction() {
             style={{ color: "#000000" }}
             className="home__section__carousel__entry__overlay__content__heading"
           >
-            MAKE A DEPOSIT
+            Transactions
           </div>
         </div>
       </div>
       <form action="" className="login__container">
         <div className="register__section__forms__content__inputs__two">
           <div className="register__section__forms__content__inputs__one">
-            <InputBox
+            <SelectBox
               variant="select"
-              placeholder="Select a Wallet"
+              placeholder="Buying Currency"
               required={true}
+              option1={<option value="USD" />}
+              option2={<option value="EUROS" />}
+              option3={<option value="GBP" />}
+              option4={<option value="NAIRA" />}
               type="text"
             />
           </div>
           <div className="register__section__forms__content__inputs__one">
             <InputBox
-              variant="select"
-              placeholder="Select a Type"
+              placeholder="Transaction Amount"
               required={true}
-              type="text"
+              type="number"
             />
           </div>
         </div>
+        <div
+          style={{ marginTop: 40 }}
+          className="register__section__forms__content__history__heading__entry"
+        >
+          Receiving Bank Details
+        </div>
+        <div className="register__section__forms__content__inputs__one">
+          <InputBox placeholder="Account Name" required={true} type="text" />
+        </div>
+        <div className="register__section__forms__content__inputs__one">
+          <InputBox placeholder="Bank Name" required={true} type="text" />
+        </div>
+        <div className="register__section__forms__content__inputs__one">
+          <InputBox placeholder=" Account Number" required={true} type="text" />
+        </div>
         <div className="register__section__forms__content__inputs__one">
           <InputBox
-            placeholder="Amount to Deposit"
+            variant="select"
+            placeholder="Select Currency"
             required={true}
             type="text"
           />
@@ -75,7 +95,7 @@ export default function Transaction() {
             }}
             className="button__secondary"
           >
-            Deposit
+            Submit
           </Link>
         </div>
       </form>
