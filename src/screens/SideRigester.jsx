@@ -145,8 +145,10 @@ export default function SideRegister() {
             </div>
           </Col>
           <Col lg={14}>
-            <div className="login_container-2">
-              <img className="login_container_img" src={logincontainer}></img>
+            <div className="overflow-hidden bg-blue-100 d-lg-block pl-0 h-100">
+              <div className="login_container-2 d-flex align-items-center justify-content-center h-100 overflow-hidden">
+                <img className="login_container_img" src={logincontainer}></img>
+              </div>
             </div>
           </Col>
         </Row>

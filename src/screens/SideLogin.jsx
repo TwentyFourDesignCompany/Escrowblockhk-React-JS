@@ -6,6 +6,7 @@ import { Form, Input, Button, Checkbox } from "antd"
 import { UserOutlined, LockOutlined } from "@ant-design/icons"
 import "antd/dist/antd.css"
 import "bootstrap/dist/css/bootstrap.css"
+import { Link } from "react-router-dom"
 export default function SideLogin() {
   const onFinish = (values) => {
     console.log("Received values of form: ", values)
@@ -100,7 +101,7 @@ export default function SideLogin() {
                     </Form.Item>
                   </Col>
                 </Row>
-                Or <a href="">register now!</a>
+                Or <Link to="/side-register">register now!</Link>
               </Form>
             </div>
           </Col>

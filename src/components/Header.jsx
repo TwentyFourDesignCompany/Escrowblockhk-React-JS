@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Menu, Search } from "react-feather";
-import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
-import SearchBar from "./SearchBar";
-import logo from "../assets/logo.png";
+import React, { useEffect, useState } from "react"
+import { Menu, Search } from "react-feather"
+import { useNavigate } from "react-router"
+import { Link } from "react-router-dom"
+import SearchBar from "./SearchBar"
+import logo from "../assets/logo.png"
 
 function NavLink({ label, path, defaultChecked }) {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   return (
     <div className="header__container__nav__link">
       <input
@@ -15,12 +15,12 @@ function NavLink({ label, path, defaultChecked }) {
         name="header__container__nav__link__input"
         defaultChecked={defaultChecked}
         onClick={() => {
-          navigate(path);
+          navigate(path)
         }}
       />
       <div className="header__container__nav__link__content">{label}</div>
     </div>
-  );
+  )
 }
 function NavLinkDropDown({ label, path, defaultChecked }) {
   return (
@@ -59,26 +59,26 @@ function NavLinkDropDown({ label, path, defaultChecked }) {
         </Link>
       </div>
     </div>
-  );
+  )
 }
 
 export default function Header() {
-  const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
+  const [isSearchBarOpen, setIsSearchBarOpen] = useState(false)
   useEffect(() => {
     if (window.innerWidth < 500) {
-      setIsSearchBarOpen(true);
+      setIsSearchBarOpen(true)
     } else {
-      setIsSearchBarOpen(false);
+      setIsSearchBarOpen(false)
     }
     window.addEventListener("resize", () => {
       if (window.innerWidth < 500) {
-        setIsSearchBarOpen(true);
+        setIsSearchBarOpen(true)
       } else {
-        setIsSearchBarOpen(false);
+        setIsSearchBarOpen(false)
       }
-    });
-    console.log(window.innerWidth);
-  }, []);
+    })
+    console.log(window.innerWidth)
+  }, [])
 
   return (
     <div className="header__container">
@@ -90,7 +90,7 @@ export default function Header() {
             fontSize: 20,
             fontWeight: 600,
             color: "#ffffff",
-            textDecoration: "none",
+            textDecoration: "none"
           }}
         >
           <img src={logo} alt="logo" className="header__container__logo" />
@@ -108,7 +108,7 @@ export default function Header() {
               onClick={() => {
                 isSearchBarOpen
                   ? setIsSearchBarOpen(false)
-                  : setIsSearchBarOpen(true);
+                  : setIsSearchBarOpen(true)
               }}
             />
           </div>
@@ -126,5 +126,5 @@ export default function Header() {
         </div>
       </div>
     </div>
-  );
+  )
 }
