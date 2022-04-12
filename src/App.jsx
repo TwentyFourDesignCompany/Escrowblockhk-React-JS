@@ -13,11 +13,13 @@ import TradeForMe from "./screens/TradeForMe";
 import SideLogin from "./screens/SideLogin";
 import SideRegister from "./screens/SideRigester";
 import ForexTraning from "./screens/ForexTraning";
+import Header from "./components/Header";
+import { Footer } from "antd/lib/layout/layout";
 
 export default function App() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/register" element={<Register />} />
@@ -32,7 +34,7 @@ export default function App() {
         <Route path="/side-register" element={<SideRegister />} />
         <Route path="/forex-training" element={<ForexTraning />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

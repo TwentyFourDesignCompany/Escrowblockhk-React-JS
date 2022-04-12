@@ -120,8 +120,8 @@ export default function Header() {
             <NavLinkDropDown label="Our Services" path="/service" />
             <NavLink label="Buy Bitcoin" path="/sell-bitcoin" />
             <NavLink label="Register" path="/register" />
-            <NavLink label="Helpdesk" path="/login" />
-            <NavLink label="Login" path="/login" />
+            <NavLink label="Sign Up" path="/side-register" />
+            <NavLink label="Login" path="/side-login" />
           </div>
         </div>
       </div>
