@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
 }
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   overflow-x: hidden;
   &::-webkit-scrollbar {
     width: 10px;
@@ -111,6 +111,7 @@ body {
   margin-top: 1em;
 }
 .button__secondary:hover {
+  color: black;
   transition: 300ms ease-in-out;
   box-shadow: 0px 0px 30px rgba(28, 25, 18, 0.2);
   transform: scale(1.05);
@@ -171,6 +172,7 @@ body {
   padding: 0.7em 1.2em;
   border-radius: 50px;
   font-size: 16px;
+  transition: 300ms ease-in-out;
 }
 .header__container__nav__link__input:hover
   ~ .header__container__nav__link__content,
@@ -179,7 +181,7 @@ body {
   transition: 300ms ease-in-out;
   background-color: #ffbc00;
   color: #ffffff;
-  box-shadow: 0px 0px 30px rgba(50, 76, 161, 0.6);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 .search__bar__btn,
 .search__btn,
@@ -1009,20 +1011,70 @@ input:-webkit-autofill:active {
 }
 .login__container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1440px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: fit-content;
+  min-height: 100vh;
   padding: 2em;
   margin: 0px auto;
+}
+.login__container__left {
+  padding: 2em;
+  width: 50%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login__container__right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .get__started__now__section {
   width: 100%;
   height: fit-content;
   min-height: 55vh;
   background: #ffbc00;
+}
+.login__container__left__heading {
+  font-size: 28px;
+  color: #000;
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.login__container__right__img {
+  width: 400px;
+}
+.login__links__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.login__forgot {
+  font-size: 15px;
+  text-decoration: none;
+}
+.new__to__login {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #000;
+  margin-top: 2em;
+  justify-content: center;
+}
+.new__to__login span {
+  margin-left: 0.5em;
+}
+.login__forgot:hover {
+  color: #ffbc00;
+  text-decoration: underline;
+  transition: 300ms ease-in-out;
 }
 .get__started__now__section__content {
   width: 100%;
@@ -1405,6 +1457,12 @@ input:-webkit-autofill:active {
   }
 }
 @media (max-width: 1000px) {
+  .login__container {
+    flex-direction: column-reverse;
+  }
+  .login__container__left {
+    width: 100%;
+  }
   .otc__vs__escrow__section__content__card {
     width: 100%;
     margin-bottom: 1em;
@@ -1578,5 +1636,12 @@ input:-webkit-autofill:active {
   }
   .home__section__carousel__entry__overlay__content__heading {
     text-align: center;
+  }
+  .login__container__left {
+    padding: 0px;
+  }
+  .login__container__right__img {
+    width: 250px;
+    margin: 2em 0em;
   }
 }
