@@ -10,11 +10,10 @@ import SellBitCoin from "./screens/SellBitCoin";
 import Transaction from "./screens/Transaction";
 import BuyBitCoin from "./screens/BuyBitCoin";
 import TradeForMe from "./screens/TradeForMe";
-import SideLogin from "./screens/SideLogin";
-import SideRegister from "./screens/SideRigester";
 import ForexTraning from "./screens/ForexTraning";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ForgotPassword from "./screens/ForgotPassword";
 
 export default function App() {
   const [noHeaderFooter, setNoHeaderFooter] = useState(false);
@@ -23,7 +22,10 @@ export default function App() {
       {noHeaderFooter ? null : <Header />}
       <Routes>
         <Route path="/" element={<HomeScreen />} />
-        <Route path="/register" element={<Register />} />
+        <Route
+          path="/register"
+          element={<Register setNoHeaderFooter={setNoHeaderFooter} />}
+        />
         <Route path="/individual-register" element={<RegisterIndividual />} />
         <Route
           path="/login"
@@ -34,9 +36,11 @@ export default function App() {
         <Route path="/sell-bitcoin" element={<BuyBitCoin />} />
         <Route path="/buy-bitcoin" element={<SellBitCoin />} />
         <Route path="/transaction" element={<Transaction />} />
-        {/* <Route path="/side-login" element={<SideLogin />} />
-        <Route path="/side-register" element={<SideRegister />} /> */}
         <Route path="/forex-training" element={<ForexTraning />} />
+        <Route
+          path="/forgot-paswword"
+          element={<ForgotPassword setNoHeaderFooter={setNoHeaderFooter} />}
+        />
       </Routes>
       {noHeaderFooter ? null : <Footer />}
     </>

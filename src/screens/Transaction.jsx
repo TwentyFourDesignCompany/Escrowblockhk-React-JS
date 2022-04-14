@@ -37,7 +37,7 @@ export default function Transaction() {
           </div>
         </div>
       </div>
-      <form action="" className="login__container">
+      <form action="" className="transaction__container">
         <div className="register__section__forms__content__inputs__two">
           <div className="register__section__forms__content__inputs__one">
             <SelectBox
@@ -85,7 +85,7 @@ export default function Transaction() {
 
         <div className="register__section__forms__content__btns">
           <Link
-            style={{ marginRight: "1em" }}
+            style={{ marginRight: "1em", padding: "1em 8em" }}
             to="/"
             onClick={() => {
               window.scrollTo({

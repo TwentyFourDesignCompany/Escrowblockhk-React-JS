@@ -4,7 +4,7 @@ import waveBG from "../assets/waveBg.svg";
 import InputBox from "../components/InputBox";
 import loginSvg from "../assets/loginSvg.svg";
 
-export default function Login({ setNoHeaderFooter }) {
+export default function ForgotPassword({ setNoHeaderFooter }) {
   useEffect(() => {
     setNoHeaderFooter(true);
     return () => {
@@ -15,40 +15,19 @@ export default function Login({ setNoHeaderFooter }) {
   return (
     <>
       <div action="" className="login__container">
-        <form action="" className="login__container__left">
+        <div className="login__container__left">
           <div className="login__container__left__heading">
-            Log In With Escroblockh
+            Reset your Password
           </div>
 
-          <div className="register__section__forms__content__inputs__one">
+          <form className="register__section__forms__content__inputs__one">
             <InputBox
               placeholder="Your Phone or Email"
               required={true}
               type="text"
             />
-          </div>
-          <div className="register__section__forms__content__inputs__one">
-            <InputBox placeholder="Password" required={true} type="password" />
-          </div>
-          <div className="login__links__wrapper register__section__forms__content__inputs__one">
-            <div>
-              <input
-                className="styled-checkbox"
-                id="styled-checkbox"
-                type="checkbox"
-                name="female"
-              />
-              <label
-                style={{ color: "#1c0a15", fontSize: 16 }}
-                htmlFor="styled-checkbox"
-              >
-                Keep me signed in
-              </label>
-            </div>
-            <Link to="/forgot-paswword" className="login__forgot">
-              Forgot Password ?
-            </Link>
-          </div>
+          </form>
+
           <div
             style={{ marginTop: 50 }}
             className="register__section__forms__content__btns"
@@ -64,16 +43,16 @@ export default function Login({ setNoHeaderFooter }) {
               }}
               className="button__secondary"
             >
-              Login
+              Request New Password
             </Link>
             <div style={{ color: "#000000" }} className="new__to__login">
               New on Escrowblockh?
               <span>
-                <Link to="/register"> Click here to Register</Link>
+                <Link to="/login"> Click here to Register</Link>
               </span>
             </div>
           </div>
-        </form>
+        </div>
         <div className="login__container__right">
           <img
             src={loginSvg}
