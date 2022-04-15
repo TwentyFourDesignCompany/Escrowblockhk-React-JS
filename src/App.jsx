@@ -7,13 +7,13 @@ import RegisterIndividual from "./screens/RegisterIndividual";
 import Login from "./screens/Login";
 import AboutUs from "./screens/AboutUs";
 import SellBitCoin from "./screens/SellBitCoin";
-import Transaction from "./screens/Transaction";
 import BuyBitCoin from "./screens/BuyBitCoin";
 import TradeForMe from "./screens/TradeForMe";
 import ForexTraning from "./screens/ForexTraning";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ForgotPassword from "./screens/ForgotPassword";
+import Dashboard from "./screens/Dashboard";
 
 export default function App() {
   const [noHeaderFooter, setNoHeaderFooter] = useState(false);
@@ -35,7 +35,7 @@ export default function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/sell-bitcoin" element={<BuyBitCoin />} />
         <Route path="/buy-bitcoin" element={<SellBitCoin />} />
-        <Route path="/transaction" element={<Transaction />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/forex-training" element={<ForexTraning />} />
         <Route
           path="/forgot-paswword"

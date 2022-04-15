@@ -34,7 +34,7 @@ export default function ForgotPassword({ setNoHeaderFooter }) {
           >
             <Link
               style={{ padding: "1em 8em" }}
-              to="/transaction"
+              to="/login"
               onClick={() => {
                 window.scrollTo({
                   top: 0,

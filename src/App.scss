@@ -231,7 +231,8 @@ body {
   display: flex;
   align-items: center;
   background-color: #ffffff;
-  padding: 0.4em 1em;
+  box-shadow: 0px 10px 30px rgb(0, 0, 0, 0.1);
+  padding: 0.3em 2em;
   border-radius: 50px;
 }
 .header__container__nav__links {
@@ -1112,6 +1113,7 @@ input:-webkit-autofill:active {
   align-items: center;
   width: 100%;
   margin-top: 4em;
+  text-decoration: none;
 }
 .get__started__now__section__content__card__img {
   width: 130px;
@@ -1128,6 +1130,7 @@ input:-webkit-autofill:active {
   font-size: 20px;
   color: #000000;
   font-weight: 500;
+  text-decoration: none;
 }
 .faq__section__content__card {
   padding: 1.5em;
@@ -1443,6 +1446,50 @@ input:-webkit-autofill:active {
   margin-bottom: 1.5em;
   text-align: center;
 }
+.user__details__wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 2em;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user__details__wrapper__img__wrapper {
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  position: relative;
+}
+
+.user__details__wrapper__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 150px;
+  object-fit: cover;
+}
+.user__details__content__heading {
+  font-size: 26px;
+  color: #000;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+.user__details__content__heading span {
+  font-size: 16px;
+  font-weight: normal;
+}
+.user__details__content {
+  margin-left: 2em;
+}
+.trasaction__details__heading {
+  font-size: 24px;
+  color: #000;
+  font-weight: 600;
+  width: 100%;
+  max-width: 1050px;
+  padding: 0.3em;
+}
 @media (max-width: 1250px) {
   .footer_maincontainercontententrywrapperentry_link::after {
     display: none;
@@ -1583,7 +1630,7 @@ input:-webkit-autofill:active {
     height: 800px;
   }
   .home__section__carousel__entry__overlay__content {
-    margin-top: 8em;
+    margin-top: 9em;
   }
   .about__section__content__card {
     width: 100%;
@@ -1654,6 +1701,9 @@ input:-webkit-autofill:active {
   }
   .home__section__carousel__entry__img {
     width: 1000px;
+  }
+  .home__section__carousel__entry {
+    overflow: hidden;
   }
   .home__section__carousel__entry__overlay__content__heading {
     text-align: center;

@@ -55,7 +55,7 @@ export default function Login({ setNoHeaderFooter }) {
           >
             <Link
               style={{ padding: "1em 8em" }}
-              to="/transaction"
+              to="/dashboard"
               onClick={() => {
                 window.scrollTo({
                   top: 0,

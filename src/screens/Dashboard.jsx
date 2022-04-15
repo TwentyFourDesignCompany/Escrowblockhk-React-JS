@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import waveBG from "../assets/waveBg.svg";
 import InputBox from "../components/InputBox";
 import SelectBox from "../components/SelectBox";
+import userPic from "../assets/userPic.jpg";
+import openaccount1 from "../assets/open-account1.svg";
+import openaccount2 from "../assets/open-account2.svg";
+import openaccount3 from "../assets/open-account3.svg";
 
 function TransactionEntry() {
   return (
@@ -23,7 +27,7 @@ function TransactionEntry() {
   );
 }
 
-export default function Transaction() {
+export default function Dashboard() {
   return (
     <>
       <div className="register__section">
@@ -33,11 +37,65 @@ export default function Transaction() {
             style={{ color: "#000000" }}
             className="home__section__carousel__entry__overlay__content__heading"
           >
-            Transactions
+            User Dashboard
+          </div>
+        </div>
+      </div>
+      <div className="user__details__wrapper">
+        <div className="user__details__wrapper__img__wrapper">
+          <img
+            src={userPic}
+            alt="userPic"
+            className="user__details__wrapper__img"
+          />
+        </div>
+        <div className="user__details__content">
+          <div className="user__details__content__heading">
+            Whole M. <span>0.0001541 BTC</span>
+          </div>
+        </div>
+      </div>
+      <div style={{ margin: "4em 0em" }} className="get__started__now__section">
+        <div className="get__started__now__section__content">
+          <div className="get__started__now__section__content__heading">
+            Quick Actions
+          </div>
+          <div className="get__started__now__section__content__card">
+            <Link
+              to="sell-bitcoin"
+              className="get__started__now__section__content__card__entry"
+            >
+              <img
+                src={openaccount2}
+                alt="openaccount1"
+                className="get__started__now__section__content__card__img"
+              />
+              But Bitcoin
+            </Link>
+            <Link
+              to="sell-bitcoin"
+              className="get__started__now__section__content__card__entry"
+            >
+              <img
+                src={openaccount3}
+                alt="openaccount1"
+                className="get__started__now__section__content__card__img"
+              />
+              Send & Receive
+            </Link>
+            <div className="get__started__now__section__content__card__entry">
+              <img
+                src={openaccount1}
+                alt="openaccount1"
+                className="get__started__now__section__content__card__img"
+              />
+              Help
+            </div>
           </div>
         </div>
       </div>
       <form action="" className="transaction__container">
+        <div className="trasaction__details__heading">Transaction</div>
         <div className="register__section__forms__content__inputs__two">
           <div className="register__section__forms__content__inputs__one">
             <SelectBox
@@ -59,10 +117,7 @@ export default function Transaction() {
             />
           </div>
         </div>
-        <div
-          style={{ marginTop: 40 }}
-          className="register__section__forms__content__history__heading__entry"
-        >
+        <div style={{ marginTop: 40 }} className="trasaction__details__heading">
           Receiving Bank Details
         </div>
         <div className="register__section__forms__content__inputs__one">
