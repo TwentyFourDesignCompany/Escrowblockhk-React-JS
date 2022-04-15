@@ -109,6 +109,7 @@ body {
   border: 1px;
   box-shadow: 19px 29px 52px rgb(255, 188, 0, 0.17);
   margin-top: 1em;
+  transition: 300ms ease-in-out;
 }
 .button__secondary:hover {
   color: black;
@@ -852,12 +853,11 @@ strong {
   text-transform: uppercase;
   color: #000000;
   font-weight: 600;
-  text-align: center;
+  width: 100%;
 }
 .register__section__forms__content__para {
   font-size: 16px;
   color: #000000;
-  text-align: center;
   margin: 0.6em 0em;
 }
 .register__section__forms__content__para__2nd {
@@ -1012,6 +1012,17 @@ input:-webkit-autofill:active {
   }
 }
 .login__container {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  min-height: 100vh;
+  padding: 2em;
+  margin: 0px auto;
+}
+.login__container__header {
   width: 100%;
   max-width: 1440px;
   display: flex;
@@ -1496,6 +1507,10 @@ input:-webkit-autofill:active {
   }
 }
 @media (max-width: 1050px) {
+  .login__container__header {
+    flex-direction: column-reverse;
+    margin-top: 10em;
+  }
   .register__section__forms__content__para__2nd {
     width: 100%;
   }
@@ -1637,6 +1652,9 @@ input:-webkit-autofill:active {
   }
 }
 @media (max-width: 500px) {
+  .login__container__header {
+    height: 1500px;
+  }
   .register__section__forms__content__para {
     width: 100%;
     text-align: justify;
@@ -1713,6 +1731,6 @@ input:-webkit-autofill:active {
   }
   .login__container__right__img {
     width: 250px;
-    margin: 2em 0em;
+    margin: 4em 0em;
   }
 }
