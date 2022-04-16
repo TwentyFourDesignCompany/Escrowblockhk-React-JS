@@ -35,6 +35,7 @@ export default function BuyBitCoin() {
             }}
             className="buy__select__input"
           >
+            <img src={bitcoin} alt="bitcoin" className="buy__select__img" />
             <input
               type="text"
               placeholder="Bitcoin"
@@ -74,30 +75,9 @@ export default function BuyBitCoin() {
 
             {select ? (
               <div className="buy__select__input__entry__wrapper">
-                <button className="buy__select__input__entry">
-                  <img
-                    src={bitcoin}
-                    alt="bitcoin"
-                    className="buy__select__img"
-                  />
-                  Bitcoin
-                </button>
-                <button className="buy__select__input__entry">
-                  <img
-                    src={bitcoin}
-                    alt="bitcoin"
-                    className="buy__select__img"
-                  />
-                  Bitcoin
-                </button>
-                <button className="buy__select__input__entry">
-                  <img
-                    src={bitcoin}
-                    alt="bitcoin"
-                    className="buy__select__img"
-                  />
-                  Bitcoin
-                </button>
+                <button className="buy__select__input__entry">Bitcoin</button>
+                <button className="buy__select__input__entry">Bitcoin</button>
+                <button className="buy__select__input__entry">Bitcoin</button>
               </div>
             ) : null}
           </div>

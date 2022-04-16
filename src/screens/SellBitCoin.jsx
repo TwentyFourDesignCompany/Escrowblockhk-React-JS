@@ -5,7 +5,7 @@ import bitcoin from "../assets/bitcoin.svg";
 import InputBox from "../components/InputBox";
 import SelectBox from "../components/SelectBox";
 
-export default function SellBitCoin() {
+export default function BuyBitCoin() {
   const [select, setSelect] = useState(false);
   const [selectPay, setSelectPay] = useState(false);
   const [selectCurrency, setSelectCurrency] = useState(false);
@@ -29,16 +29,18 @@ export default function SellBitCoin() {
           >
             Sell
           </div>
-          <button
+          <div
             onClick={() => {
               select ? setSelect(false) : setSelect(true);
             }}
             className="buy__select__input"
           >
-            <div className="buy__select__input__content">
-              <img src={bitcoin} alt="bitcoin" className="buy__select__img" />
-              Bitcoin
-            </div>
+            <img src={bitcoin} alt="bitcoin" className="buy__select__img" />
+            <input
+              type="text"
+              placeholder="Bitcoin"
+              className="buy__text__input"
+            />
             {select ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,33 +75,12 @@ export default function SellBitCoin() {
 
             {select ? (
               <div className="buy__select__input__entry__wrapper">
-                <button className="buy__select__input__entry">
-                  <img
-                    src={bitcoin}
-                    alt="bitcoin"
-                    className="buy__select__img"
-                  />
-                  Bitcoin
-                </button>
-                <button className="buy__select__input__entry">
-                  <img
-                    src={bitcoin}
-                    alt="bitcoin"
-                    className="buy__select__img"
-                  />
-                  Bitcoin
-                </button>
-                <button className="buy__select__input__entry">
-                  <img
-                    src={bitcoin}
-                    alt="bitcoin"
-                    className="buy__select__img"
-                  />
-                  Bitcoin
-                </button>
+                <button className="buy__select__input__entry">Bitcoin</button>
+                <button className="buy__select__input__entry">Bitcoin</button>
+                <button className="buy__select__input__entry">Bitcoin</button>
               </div>
             ) : null}
-          </button>
+          </div>
           <div className="bitcoin__value__card">
             <span>1 BTC = </span> 16,746,442.19 NGN{" "}
             <svg
@@ -143,7 +124,7 @@ export default function SellBitCoin() {
               className="start__up__container__form__input__box"
             >
               <div className="start__up__container__form__input__box__label">
-                Get Paid Via
+                I have (Amount to Change)
               </div>
               <div className="start__up__container__form__input__box__content">
                 <input
@@ -276,7 +257,7 @@ export default function SellBitCoin() {
                     }}
                     className="payments__entry"
                   >
-                    Bank
+                    Naira
                   </button>
                 </div>
               ) : null}
@@ -293,7 +274,7 @@ export default function SellBitCoin() {
             //   });
             // }}
           >
-            Submit Offer
+            Submit Offer Request
           </button>
         </div>
         <div className="login__container__right">
