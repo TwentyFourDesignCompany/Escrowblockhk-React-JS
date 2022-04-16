@@ -14,7 +14,15 @@ export default function Register({ setNoHeaderFooter }) {
   return (
     <>
       <div action="" className="login__container">
-        <form action="" className="login__container__left">
+        <form
+          action=""
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+          className="login__container__left"
+        >
           <div className="register__section__forms__content__heading">
             Escrow Block KYC Forms
           </div>

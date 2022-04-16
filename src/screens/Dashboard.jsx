@@ -70,10 +70,10 @@ export default function Dashboard() {
                 alt="openaccount1"
                 className="get__started__now__section__content__card__img"
               />
-              But Bitcoin
+              Buy Bitcoin
             </Link>
             <Link
-              to="sell-bitcoin"
+              to="buy-bitcoin"
               className="get__started__now__section__content__card__entry"
             >
               <img
@@ -83,14 +83,17 @@ export default function Dashboard() {
               />
               Send & Receive
             </Link>
-            <div className="get__started__now__section__content__card__entry">
+            <Link
+              to="/login"
+              className="get__started__now__section__content__card__entry"
+            >
               <img
                 src={openaccount1}
                 alt="openaccount1"
                 className="get__started__now__section__content__card__img"
               />
               Help
-            </div>
+            </Link>
           </div>
         </div>
       </div>
