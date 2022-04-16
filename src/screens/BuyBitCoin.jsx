@@ -29,16 +29,17 @@ export default function BuyBitCoin() {
           >
             Buy
           </div>
-          <button
+          <div
             onClick={() => {
               select ? setSelect(false) : setSelect(true);
             }}
             className="buy__select__input"
           >
-            <div className="buy__select__input__content">
-              <img src={bitcoin} alt="bitcoin" className="buy__select__img" />
-              Bitcoin
-            </div>
+            <input
+              type="text"
+              placeholder="Bitcoin"
+              className="buy__text__input"
+            />
             {select ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +100,7 @@ export default function BuyBitCoin() {
                 </button>
               </div>
             ) : null}
-          </button>
+          </div>
           <div className="bitcoin__value__card">
             <span>1 BTC = </span> 16,746,442.19 NGN{" "}
             <svg
@@ -143,7 +144,7 @@ export default function BuyBitCoin() {
               className="start__up__container__form__input__box"
             >
               <div className="start__up__container__form__input__box__label">
-                Get Paid Via
+                I have (Amount to Change)
               </div>
               <div className="start__up__container__form__input__box__content">
                 <input
@@ -276,13 +277,15 @@ export default function BuyBitCoin() {
                     }}
                     className="payments__entry"
                   >
-                    Bank
+                    Naira
                   </button>
                 </div>
               ) : null}
             </div>
           </div>
-
+          <div className="register__section__forms__content__inputs__one">
+            <InputBox placeholder="Wallet Address" type="text" />
+          </div>
           <button
             style={{ marginTop: "2em", padding: "1em 4em" }}
             className="button__secondary"
@@ -293,7 +296,7 @@ export default function BuyBitCoin() {
             //   });
             // }}
           >
-            Submit Offer
+            Submit Offer Request
           </button>
         </div>
         <div className="login__container__right">

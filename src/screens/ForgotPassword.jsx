@@ -33,7 +33,7 @@ export default function ForgotPassword({ setNoHeaderFooter }) {
             className="register__section__forms__content__btns"
           >
             <Link
-              style={{ padding: "1em 8em" }}
+              style={{ padding: "1em 4em" }}
               to="/login"
               onClick={() => {
                 window.scrollTo({

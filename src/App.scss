@@ -1621,6 +1621,15 @@ input:-webkit-autofill:active {
   margin-right: 1em;
   cursor: pointer;
 }
+.buy__text__input {
+  width: 80%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+}
 @media (max-width: 1250px) {
   .footer_maincontainercontententrywrapperentry_link::after {
     display: none;
