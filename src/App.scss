@@ -1622,13 +1622,27 @@ input:-webkit-autofill:active {
   cursor: pointer;
 }
 .buy__text__input {
-  width: 88%;
+  width: 95%;
   background: transparent;
   border: none;
   outline: none;
   font-size: 16px;
   color: #000;
   font-weight: 500;
+}
+.trade__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em 0em;
+}
+.trade__container__heading {
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2em;
 }
 @media (max-width: 1250px) {
   .footer_maincontainercontententrywrapperentry_link::after {

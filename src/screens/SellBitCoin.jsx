@@ -29,57 +29,13 @@ export default function BuyBitCoin() {
           >
             Sell
           </div>
-          <div
-            onClick={() => {
-              select ? setSelect(false) : setSelect(true);
-            }}
-            className="buy__select__input"
-          >
+          <div className="buy__select__input">
             <img src={bitcoin} alt="bitcoin" className="buy__select__img" />
             <input
               type="text"
               placeholder="Bitcoin"
               className="buy__text__input"
             />
-            {select ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-chevron-up"
-              >
-                <polyline points="18 15 12 9 6 15"></polyline>
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-chevron-down"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            )}
-
-            {select ? (
-              <div className="buy__select__input__entry__wrapper">
-                <button className="buy__select__input__entry">Bitcoin</button>
-                <button className="buy__select__input__entry">Bitcoin</button>
-                <button className="buy__select__input__entry">Bitcoin</button>
-              </div>
-            ) : null}
           </div>
           <div className="bitcoin__value__card">
             <span>1 BTC = </span> 16,746,442.19 NGN{" "}
@@ -124,7 +80,7 @@ export default function BuyBitCoin() {
               className="start__up__container__form__input__box"
             >
               <div className="start__up__container__form__input__box__label">
-                I have (Amount to Change)
+                Get Paid Via
               </div>
               <div className="start__up__container__form__input__box__content">
                 <input
@@ -194,7 +150,7 @@ export default function BuyBitCoin() {
               className="start__up__container__form__input__box"
             >
               <div className="start__up__container__form__input__box__label">
-                I want to get
+                I have (Amount to Change)
               </div>
               <div className="start__up__container__form__input__box__content">
                 <input

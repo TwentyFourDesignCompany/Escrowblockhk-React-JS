@@ -30,9 +30,9 @@ export default function BuyBitCoin() {
             Buy
           </div>
           <div
-            onClick={() => {
-              select ? setSelect(false) : setSelect(true);
-            }}
+            // onClick={() => {
+            //   select ? setSelect(false) : setSelect(true);
+            // }}
             className="buy__select__input"
           >
             <img src={bitcoin} alt="bitcoin" className="buy__select__img" />
@@ -41,7 +41,7 @@ export default function BuyBitCoin() {
               placeholder="Bitcoin"
               className="buy__text__input"
             />
-            {select ? (
+            {/* {select ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -79,7 +79,7 @@ export default function BuyBitCoin() {
                 <button className="buy__select__input__entry">Bitcoin</button>
                 <button className="buy__select__input__entry">Bitcoin</button>
               </div>
-            ) : null}
+            ) : null} */}
           </div>
           <div className="bitcoin__value__card">
             <span>1 BTC = </span> 16,746,442.19 NGN{" "}
@@ -124,7 +124,7 @@ export default function BuyBitCoin() {
               className="start__up__container__form__input__box"
             >
               <div className="start__up__container__form__input__box__label">
-                I have (Amount to Change)
+                Get Paid Via
               </div>
               <div className="start__up__container__form__input__box__content">
                 <input
@@ -194,7 +194,7 @@ export default function BuyBitCoin() {
               className="start__up__container__form__input__box"
             >
               <div className="start__up__container__form__input__box__label">
-                I want to get
+                I have (Amount to Change)
               </div>
               <div className="start__up__container__form__input__box__content">
                 <input
