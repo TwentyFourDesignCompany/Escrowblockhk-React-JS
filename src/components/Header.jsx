@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import logo from "../assets/logo.png";
 
-function NavLink({ label, path, defaultChecked }) {
+function NavLink({ label, path, defaultChecked, isPopup, setIsConnectWallet }) {
   const navigate = useNavigate();
   return (
     <div className="header__container__nav__link">
@@ -15,7 +15,7 @@ function NavLink({ label, path, defaultChecked }) {
         name="header__container__nav__link__input"
         defaultChecked={defaultChecked}
         onClick={() => {
-          navigate(path);
+          isPopup ? setIsConnectWallet(true) : navigate(path);
         }}
       />
       <div className="header__container__nav__link__content">{label}</div>
@@ -62,7 +62,7 @@ function NavLinkDropDown({ label, path, defaultChecked }) {
   );
 }
 
-export default function Header() {
+export default function Header({ setIsConnectWallet }) {
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
 
   useEffect(() => {
@@ -121,7 +121,11 @@ export default function Header() {
             <NavLinkDropDown label="Our Services" path="/service" />
             <NavLink label="Buy Bitcoin" path="/sell-bitcoin" />
             <NavLink label="Register" path="/register" />
-            <NavLink label="Help Desk" path="/login" />
+            <NavLink
+              label="Connect Wallet"
+              isPopup={true}
+              setIsConnectWallet={setIsConnectWallet}
+            />
             <NavLink label="Login" path="/login" />
           </div>
         </div>

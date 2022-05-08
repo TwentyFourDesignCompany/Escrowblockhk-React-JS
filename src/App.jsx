@@ -14,12 +14,19 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ForgotPassword from "./screens/ForgotPassword";
 import Dashboard from "./screens/Dashboard";
+import ConnectWalletPopup from "./screens/ConnectWalletPopup";
 
 export default function App() {
   const [noHeaderFooter, setNoHeaderFooter] = useState(false);
+  const [isConnectWallet, setIsConnectWallet] = useState(false);
   return (
     <>
-      {noHeaderFooter ? null : <Header />}
+      {isConnectWallet ? (
+        <ConnectWalletPopup setIsConnectWallet={setIsConnectWallet} />
+      ) : null}
+      {noHeaderFooter ? null : (
+        <Header setIsConnectWallet={setIsConnectWallet} />
+      )}
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route
